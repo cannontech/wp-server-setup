@@ -2,13 +2,13 @@
 #GSN WP Client (worker) Setup
 #Version 1.0.0
 
-# nfs requirements
+echo "nfs requirements"
 apt-get install nfs-common
 
-# create a directory for the shared data
+echo "create a directory for the shared data"
 mkdir -p /mnt/nfs/wordpress
 
-# mount the shared filesystem
+echo "mount the shared filesystem"
 mount admin.prodwp.gsn2.com:/dev/xvdf/wordpress /mnt/nfs/wordpress
 
 # set automatic mounting in case of reboot
