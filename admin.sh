@@ -14,20 +14,20 @@ echo "************"
 echo "************ create a mount point"
 mkdir /usr/share/nginx/wordpress
 
-echo "************"
-echo "************ make the directory to share"
-mkdir /dev/xvdf/wordpress
+#echo "************"
+#echo "************ make the directory to share"
+#mkdir /dev/xvdf/wordpress
 
 echo "************"
 echo "************ mount the attached ebs to /wordpress"
-mount /dev/xvdf/wordpress /usr/share/nginx/wordpress
+mount /dev/xvdf /usr/share/nginx/wordpress
 
 echo "************"
 echo "************ change the ownership"
-chown nobody:nogroup /dev/xvdf/wordpress
+chown nobody:nogroup /dev/xvdf
 
 echo "************"
 echo "************ give permission to access the drive to the worker(s)"
-echo "/dev/xvdf/wordpress 0.0.0.0(rw,sync,no_subtree_check)" &> /etc/exports
+echo "/dev/xvdf 0.0.0.0(rw,sync,no_subtree_check)" &> /etc/exports
 
 service nfs-kernel-server start
