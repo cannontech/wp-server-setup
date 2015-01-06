@@ -18,9 +18,9 @@ echo "************ make the directory to share"
 mkdir /dev/xvdf/wordpress
 
 echo "************ change the ownership"
-chown nobody:nogroup /dev/xvdf/wordpress
+chown nobody:nogroup /dev/xvdf/nginx/wordpress
 
 echo "************ give permission to access the drive to the worker(s)"
-echo "/dev/xvdf/wordpress 0.0.0.0(rw,sync,no_subtree_check)" &> /etc/exports
+echo "/dev/xvdf/nginx/wordpress 0.0.0.0(rw,sync,no_subtree_check)" &> /etc/exports
 
 service nfs-kernel-server start
