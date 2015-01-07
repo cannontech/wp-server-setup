@@ -12,7 +12,7 @@ mkdir -p /mnt/nfs/wordpress
 
 echo "************"
 echo "************ mount the shared filesystem"
-#mount admin.prodwp.gsn2.com:/dev/xvdf/wordpress /mnt/nfs/wordpress
+#mount admin.prodwp.gsn2.com:/dev/xvdf /mnt/nfs/wordpress
 mount admin.prodwp.gsn2.com:/mnt/sharefs/wordpress /mnt/nfs/wordpress 
 
 # set automatic mounting in case of reboot
