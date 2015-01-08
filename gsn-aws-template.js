@@ -140,7 +140,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "ecs-test-ec2-cloud"
+            "Value": "wp-ec2-admin"
           }
         ],
         "NetworkInterfaces": [
@@ -177,7 +177,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "ecs-test-ec2-cloud-worker"
+            "Value": "wp-ec2-worker"
           }
         ],
         "NetworkInterfaces": [
