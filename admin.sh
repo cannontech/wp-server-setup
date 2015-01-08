@@ -19,6 +19,7 @@ echo "************ mount the attached ebs to /wordpress"
 mount /dev/xvdf /mnt/sharefs
 
 mkdir /mnt/sharefs/wordpress
+mkdir /mnt/sharefs/gsn-repo
 
 echo "************"
 echo "************ change the ownership"

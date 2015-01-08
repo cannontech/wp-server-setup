@@ -6,7 +6,7 @@ apt-get update
 apt-get -y upgrade
 
 # Basic Requirements
-apt-get -y --force-yes install mysql-client nginx php5-fpm php5-mysql pwgen python-setuptools curl unzip libssh2-php
+apt-get -y --force-yes install mysql-client nginx php5-fpm php5-mysql pwgen python-setuptools curl unzip libssh2-php git
 
 # Wordpress Requirements
 apt-get -y --force-yes install php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl

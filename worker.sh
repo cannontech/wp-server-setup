@@ -15,7 +15,7 @@ echo "************ mount the shared filesystem"
 mount admin.prodwp.gsn2.com:/mnt/sharefs/wordpress /mnt/nfs/wordpress 
 
 # set automatic mounting in case of reboot
-#sed -i -e "s/admin.prodwp.gsn2.com:\/mnt\/sharefs\/wordpress/\/mnt\/nfs\/wordpres   nfs auto,noatime,nolock,bg,nfsvers=4,sec=krb5p,intr,tcp,actimeo=1800 0 0/g" /etc/fstab
+#sed -i -e "s/admin.prodwp.gsn2.com:\/mnt\/sharefs\/wordpress/\/mnt\/nfs\/wordpress   nfs auto,noatime,nolock,bg,nfsvers=4,sec=krb5p,intr,tcp,actimeo=1800 0 0/g" /etc/fstab
 
 echo "************"
 echo "************ set worker to proxy to admin"
