@@ -29,7 +29,7 @@ logout ssh
 
 *configure wp*
 browse to admin IP
-fill in form (MyDatabase, wpuser, MyPassword, db string from aws console)
+fill in form
 
 ##worker instance
 ssh into worker box
