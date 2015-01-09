@@ -5,6 +5,8 @@ git clone https://github.com/cannontech/wp-server-setup.git
 
 log into aws
 
+select n.california for region
+
 run template (wp-server-setup/gsn-aws-template.js in services/cloudformation)
 
 ssh into admin box
