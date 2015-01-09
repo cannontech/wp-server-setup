@@ -3,11 +3,13 @@
 ##admin instance
 git clone https://github.com/cannontech/wp-server-setup.git
 
+edit template (gsn-aws-template.js), find rdswordpress, fill in DBName and MasterUserPassword
+
 log into aws
 
 select n.california for region
 
-run template (wp-server-setup/gsn-aws-template.js in services/cloudformation)
+run template (<git folder>/wp-server-setup/gsn-aws-template.js in services/cloudformation)
 
 ssh into admin box
 
