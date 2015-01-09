@@ -32,7 +32,7 @@ echo "************ increase permissions"
 #chmod 755 /mnt/sharefs
 find /mnt/sharefs/wordpress/ -type d -exec chmod 755 {} \;
 find /mnt/sharefs/wordpress/ -type f -exec chmod 644 {} \;
-#chmod 777 /mnt/sharefs/wordpress
+chmod 777 /mnt/sharefs/wordpress
 
 echo "************"
 echo "************ give permission to access the drive to the worker(s) -fails??"
