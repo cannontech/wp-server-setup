@@ -10,9 +10,13 @@ echo "************"
 echo "************ create a directory for the shared data"
 mkdir -p /mnt/nfs/wordpress
 
+echo "Enter the IP or domain of the admin box where the shared volume is:"
+read server
+
 echo "************"
 echo "************ mount the shared filesystem"
-mount admin.prodwp.gsn2.com:/mnt/sharefs/wordpress /mnt/nfs/wordpress 
+#mount admin.prodwp.gsn2.com:/mnt/sharefs/wordpress /mnt/nfs/wordpress 
+mount "$server":/mnt/sharefs/wordpress /mnt/nfs/wordpress 
 
 # set automatic mounting in case of reboot
 #sed -i -e "s/admin.prodwp.gsn2.com:\/mnt\/sharefs\/wordpress/\/mnt\/nfs\/wordpress   nfs auto,noatime,nolock,bg,nfsvers=4,sec=krb5p,intr,tcp,actimeo=1800 0 0/g" /etc/fstab
