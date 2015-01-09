@@ -1,4 +1,4 @@
-AWS GSN WP Setup v1.0.0
+#AWS GSN WP Setup v1.0.0
 
 run template
 ssh into admin box
