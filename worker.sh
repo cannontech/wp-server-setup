@@ -18,10 +18,6 @@ mount admin.prodwp.gsn2.com:/mnt/sharefs/wordpress /mnt/nfs/wordpress
 #sed -i -e "s/admin.prodwp.gsn2.com:\/mnt\/sharefs\/wordpress/\/mnt\/nfs\/wordpress   nfs auto,noatime,nolock,bg,nfsvers=4,sec=krb5p,intr,tcp,actimeo=1800 0 0/g" /etc/fstab
 
 echo "************"
-echo "************ set worker to proxy to admin"
-sed -i -e "s/# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests/boohoohoo/g" /etc/nginx/sites-available/default
-
-echo "************"
 echo "************ point the document root at the nfs folder"
 sed -i -e "s/\/usr\/share\/nginx\/html/\/mnt\/nfs\/wordpress/g" /etc/nginx/sites-available/default
 
@@ -35,7 +31,7 @@ sed -i -e "s/# pass the PHP scripts to FastCGI server listening on 127.0.0.1:900
 
 echo "************"
 echo "************ add proxy to admin"
-sed -i -e "s/#location \/RequestDenied {/location \/wp-admin {proxy-pass http:\/\/admin.prodwp.gsn2.com;}/g" /etc/nginx/sites-available/default
+sed -i -e "s/#location \/RequestDenied {/location \/wp-admin {proxy_pass http:\/\/admin.prodwp.gsn2.com;}/g" /etc/nginx/sites-available/default
 
 echo "************"
 echo "************ restart nginx"

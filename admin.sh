@@ -28,8 +28,6 @@ chown nobody:nogroup /mnt/sharefs/gsn-repo
 
 echo "************"
 echo "************ increase permissions"
-#chmod 755 /mnt
-#chmod 755 /mnt/sharefs
 find /mnt/sharefs/wordpress/ -type d -exec chmod 755 {} \;
 find /mnt/sharefs/wordpress/ -type f -exec chmod 644 {} \;
 chmod 777 /mnt/sharefs/wordpress
@@ -58,19 +56,16 @@ echo "************"
 echo "************ clone the gsn wp repo"
 git clone --recursive https://github.com/cannontech/wp-skeleton.git /mnt/sharefs/gsn-repo/repo
 
-#echo "************"
-#echo "************ change the ownership of the wordpress folder"
-#chown nobody:nogroup /mnt/sharefs/gsn-repo
-
-#echo "************"
-#echo "************ increase permissions"
-#chmod 777 /mnt/sharefs/gsn-repo
-
 echo "************"
 echo "************ move the wordpress files"
 mv /mnt/sharefs/gsn-repo/repo/wp/* /mnt/sharefs/wordpress
 mv /mnt/sharefs/gsn-repo/repo/content/themes/* /mnt/sharefs/wordpress/wp-content/themes
 mv /mnt/sharefs/gsn-repo/repo/content/plugins/* /mnt/sharefs/wordpress/wp-content/plugins
+
+echo "************"
+echo "************ move the scripts to the shared drive"
+mkdir /mnt/sharefs/gsn-scripts
+#mv /mnt/sharefs/gsn-scripts
 
 echo "************"
 echo "************ restart nginx"
