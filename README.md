@@ -1,7 +1,11 @@
 #AWS GSN WP Setup v1.0.0
 
 ##admin instance
-run template
+git clone https://github.com/cannontech/wp-server-setup.git
+
+log into aws
+
+run template (wp-server-setup/gsn-aws-template.js in services/cloudformation)
 
 ssh into admin box
 
