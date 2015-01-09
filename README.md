@@ -1,7 +1,9 @@
 #AWS GSN WP Setup v1.0.0
 
 run template
+
 ssh into admin box
+
 sudo apt-get update
 sudo apt-get install git
 sudo git clone https://github.com/cannontech/wp-server-setup.git
