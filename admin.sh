@@ -23,8 +23,8 @@ mkdir /mnt/sharefs/gsn-repo
 
 echo "************"
 echo "************ change the ownership of the wordpress folder"
-chown nobody:nogroup /mnt/sharefs/wordpress
-chown nobody:nogroup /mnt/sharefs/gsn-repo
+chown www-data:www-data /mnt/sharefs/wordpress
+chown www-data:www-data /mnt/sharefs/gsn-repo
 
 echo "************"
 echo "************ increase permissions"
