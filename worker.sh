@@ -2,6 +2,9 @@
 #GSN WP Client (worker) Setup
 #Version 1.0.0
 
+#todo
+#add a new user called 'deploy'
+
 echo "************"
 echo "************ nfs requirements"
 apt-get install nfs-common
