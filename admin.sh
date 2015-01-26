@@ -39,7 +39,8 @@ echo "************"
 echo "************ give permission to access the drive to the worker(s) -fails??"
 echo "" &> /etc/exports
 echo "/mnt/sharefs *.prodwp.gsn2.com(rw,sync,no_subtree_check)" >> /etc/exports
-echo "/mnt/sharefs 10.0.0.0/255.255.255.0(rw,sync,no_subtree_check)" >> /etc/exports
+#echo "/mnt/sharefs 10.0.0.0/255.255.255.0(rw,sync,no_subtree_check)" >> /etc/exports
+echo "/mnt/sharefs 10.0.0.0/24(rw,sync,no_subtree_check)" >> /etc/exports
 
 service nfs-kernel-server start
 
